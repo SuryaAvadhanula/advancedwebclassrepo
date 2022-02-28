@@ -4,14 +4,16 @@ import Message from './pages/Messages.vue'
 </script>
 
 <template>
-<Nav/>
-<h1 class="title">
-   Welcome to the Vue project
- </h1>
-<Message/>
- 
+  <div>
+    <Nav />
+    <div class="container">
+      <section class="section">
+      <h1 class="title">Welcome to the Vue project</h1>
+      <Message />
+      </section>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-
+<style>
 </style>
