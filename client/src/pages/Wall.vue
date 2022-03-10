@@ -102,10 +102,7 @@ const notifications = reactive([
                             </div>
                           </div>
 
-                        <div v-for=" (x, i) in notifications" :class="`notification is-${x.type}`">
-                            <button class="delete" @click="close(i)" ></button>
-                            {{ x.message }}
-                        </div>
+                        <Messages />
                         
                     </div>
                        
@@ -160,5 +157,6 @@ const notifications = reactive([
             </div>
   
 </template>
+
 
 <style scoped></style>

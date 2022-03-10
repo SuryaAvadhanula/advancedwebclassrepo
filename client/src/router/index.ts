@@ -12,7 +12,7 @@ import session from "../models/session";
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
-  { path: '/messages', component: () => import('../pages/Messages.vue') },
+  { path: '/messages', component: () => import('../pages/Wall.vue') },
   { path: '/signup', component: Generic, props: { title: 'Signup Page!' } },
   { path: '/about', component: Generic, props: { title: 'About Page!' } },
   { path: '/contact', component: Generic, props: { title: 'Contact Page!' } },
@@ -29,7 +29,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
-    if (['/messages'].includes(to.path)) { // list of paths that require login
+    if (['/messages', '/wall', '/feed'].includes(to.path)) {
         if (!session.user) {
             return '/login';
         }
