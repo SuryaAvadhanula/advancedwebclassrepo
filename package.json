@@ -1,0 +1,21 @@
+{
+  "name": "advwebclassrepo",
+  "version": "1.0.0",
+  "description": "It consists of following technologies\r - HTML\r - CSS\r - BULMA\r - NODE JS\r - EXPRESS\r - CI/CD",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuryaAvadhanula/advancedwebclassrepo.git"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
