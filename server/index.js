@@ -8,7 +8,7 @@ const port = 3000
 app
     
     .use('/', express.static(__dirname + '/public/'))
-
+    .use(express.json())
     .get('/api/', (req, res) => {
         res.send('You are on the homepage');
     })
