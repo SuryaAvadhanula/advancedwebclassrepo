@@ -1,16 +1,21 @@
+require('dotenv').config();
 const express = require('express');
 
 const usersController = require('./controllers/users');
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
+
+console.log(process.env);
 
 app
     
     .use('/', express.static(__dirname + '/public/'))
+
     .use(express.json())
+
     .get('/api/', (req, res) => {
-        res.send('You are on the homepage');
+        res.send('Root API - ' + process.env.BEST_CLASS_EVER);
     })
     .use('/api/users', usersController)
 
