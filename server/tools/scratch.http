@@ -31,3 +31,5 @@ Content-Type: application/json
   "lastName": "Putin",
   "password": "Ukraine"
 }
+
+POST  http://localhost:3001/api/users/seed
