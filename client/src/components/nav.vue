@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { RouterLink } from "vue-router";
 import LoginBadge from './LoginBadge.vue';
-import messages from './Messages.vue';
+import Messages from './Messages.vue';
     
     const isOpen = ref(false);
 </script>
